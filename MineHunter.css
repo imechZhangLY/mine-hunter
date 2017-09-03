@@ -1,0 +1,54 @@
+.option{
+	width: 440px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 5px 10px;
+	margin-top: 50px;
+	font-size: 18px;
+}
+
+.output{
+	width: 40px;
+	height: 18px;
+	margin-right: 140px;
+}
+.right{
+	margin-right: 20px;
+}
+.opbutton{
+	width: 60px;
+	height: 30px;
+	font-size: 18px;
+	margin-left: 20px;
+}
+.control{
+	margin-top: 10px;
+}
+.img{
+	display: inline-block;
+	background-image: url("image\\smile.svg");
+	background-size: 40px;
+	background-repeat: no-repeat;
+	background-position: 10px;
+	width: 60px;
+	height: 40px;
+	margin-left: 100px;
+	margin-right: 85px;
+	transform: translateY(15px);
+}
+.container{
+	margin: 30px auto;
+	background-color: rgb(200,200,200);
+}
+.button{
+	display: block;
+	float: left;
+	width: 50px;
+	height: 45px;
+	margin: 2px;
+	padding: 0px;
+	background-color: rgb(80,90,100);
+	background-repeat: no-repeat;
+	background-clip: content-box;
+	background-size: 45px;
+}
