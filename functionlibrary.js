@@ -20,6 +20,8 @@ function FuncOnClick(urlMine,urlNormal,arrButton,index1,index2,n,intervalId,even
 		this.style.backgroundImage=urlNormal
 		this.disabled = 'disabled'
 		if(document.getElementById('numberofmines').value - 0 > 1){
+			console.log('the value')
+			console.log(document.getElementById('numberofmines').value)
 			document.getElementById('numberofmines').value -= 1
 		}else{
 			document.getElementById('numberofmines').value -= 1

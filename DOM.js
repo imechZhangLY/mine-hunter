@@ -6,6 +6,7 @@
 	var mineNumber = 10
 	var urlMine = 'url(image/mine.png)'
 	var urlFlag = 'url(image/flag3.png)'
+	var funcOnClick = []
 
 	function build(){
 		var temp = []
@@ -54,9 +55,11 @@
 		var j = 0
 		arrbutton.forEach(function(ele1){
 			j=0
+			funcOnClick.push([])
 			ele1.forEach(function(ele2){
 				ele2.disabled = false
-				ele2.addEventListener('mousedown',FuncOnClick.bind(ele2,urlMine,urlFlag,arrbutton,i,j,n,intervalId))
+				funcOnClick[i].push(FuncOnClick.bind(ele2,urlMine,urlFlag,arrbutton,i,j,n,intervalId))
+				ele2.addEventListener('mousedown',funcOnClick[i][j])
 				j++
 			})
 			i++
@@ -69,6 +72,7 @@
 	}
 	document.getElementById('start').addEventListener('click',start)
 
+	//重置页面
 	function reset(){
 		var arr = RandomNumber(n,mineNumber)
 		document.getElementById('start').disabled = false
@@ -80,6 +84,7 @@
 		arrbutton.forEach(function(ele1){
 			j = 0
 			ele1.forEach(function(ele2){
+				ele2.removeEventListener('mousedown',funcOnClick[i][j])
 				ele2.style = {}
 				ele2.innerText = ''
 				ele2.setAttribute('class','button mine')
